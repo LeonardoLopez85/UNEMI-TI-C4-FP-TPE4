@@ -34,51 +34,42 @@ print("Subcadena [0:6]:", subcadena_1)
 print("Subcadena [6:]:", subcadena_2)
 print("Subcadena completa [:]:", subcadena_3)
 
-# 1). ENCABEZADO
-# ES EL COMENTARIO SIRVE PARA QUIEN REVISE SEPA DE QUE TRATA EL PROGRAMA
- 
+print("\n----------------------------")
+print("Código - Conversión y conteo") 
+print("----------------------------")
 
-# 2). CONCATENACION
-# Cadena1 = “Hola” guarda la cadena “Hola” en la variable cadena1.
-# Cadena2 = “Mundo” guarda “Mundo” en cadena2.
-# Cadena1 +” “+ cadena2 une las dos cadenas con un espacio en medio. El operador + concatena strings directamente.
-# El resultado “Hola Mundo” se guarda en concatenación_mas.
-# Print (…) muestra en pantalla: concatenación con +: Hola Mundo
- 
+# ----- Conversión de mayúsculas y minúsculas -----
 
-# 3). CONCATENACION USANDO JOIN ()
- 
-# Palabras es una lista de strings: \left["\right.Hola”, “desde”,” Python\left."\right].
-# “ ”. Join (palabras) toma cada elemento de la lista y los une en una sola cadena usando “” (un espacio) como separador.
-# Si hubiera usado “,”. join (palabras), el separador sería una coma.
-# El resultado “Hola desde Python” se guarda en cancatenacion_join.
-# Print (…) muestra: concatenación con join(): Hola desde Python
+mensaje = "Python es un Lenguaje Muy Versátil"
 
-# 4). DEFINICIÓN DEL TEXTO PARA EXTRACCIÓN 
- 
-# Guarda la cadena “programación “en la variable texto. A partir de aquí extraemos caracteres y subcadenas.
+# Convertir todo a mayúsculas usando upper()
+mensaje_mayusculas = mensaje.upper()
+print("\n-------- Conversión --------")
+print("Original:", mensaje)
+print("Mayúsculas:", mensaje_mayusculas)
 
-# 5). INDEXADO OBTENER UN SOLO CARÁCTER
- 
-# Texto \left[0\right] devuelve el carácter en la posición 0 (el primero). En “programación “es “p”.
-# Texto \left[-1\right] usa índice negativo: -1 es el último carácter de la cadena. En este caso es “n”.
-# Se imprimen: 
-# Primer carácter: p 
-# Ultimo carácter: n 
-# Los índices empiezan en 0. Entonces texto\left[1\right] seria la segunda letra 
+# Convertir todo a minúsculas usando lower()
+mensaje_minusculas = mensaje.lower()
+print("Minúsculas:", mensaje_minusculas)
 
-# 6). SLICING REBANADO DE SUBCADENA 
-# Texto \left[0:6\right]toma desde el índice 0 hasta el índice 6, pero no incluye el carácter en el índice 6. Esto devuelve los índices 0,1,2,3,4,5. Para “programación “ 
-# Texto \left[0:6\right]”progra”
-# Se imprime: subcadena \left[0:6\right] :progra
-# Texto \left[6\right] toma desde el índice 6 hasta el final de la cadena (incluye el carácter en 6) 
-# Texto \left[6:\right] desde el carácter en posición 6 hasta el final “macion”
-# Se imprime subcadena \left[6:\right]:macion
-# Texto \left[:\right] copia la cadena completa (desde inicio hasta el final) 
-# Texto \left[:\right]”programación “
-# Se imprime: subcadena completa \left[:\right]:programación 
-# Regla general del slicing a: b: 
-# Empieza en a (incluye a).
-# Termina en b (no incluye b).
-# Si a se omite, empieza en 0. Si b se omite, llega al final. 
+# ----- Conteo de caracteres y palabras -----
 
+frase_estudio = "Fundamentos de la programación en la universidad"
+
+# 1. Contar caracteres (len)
+# La función len() cuenta todo, incluyendo espacios en blanco.
+total_caracteres = len(frase_estudio)
+
+print("\n---------- Conteo ----------")
+print(f"Frase analizada: '{frase_estudio}'")
+print("Total de caracteres (con espacios):", total_caracteres)
+
+# 2. Contar palabras
+# Primero usamos split() para 'romper' la cadena en una lista de palabras
+lista_de_palabras = frase_estudio.split()
+# Luego contamos cuántos elementos tiene esa lista
+cantidad_palabras = len(lista_de_palabras)
+
+print("Lista generada:", lista_de_palabras)
+print("Cantidad de palabras:", cantidad_palabras)
+print("\n----------------------------\n")
