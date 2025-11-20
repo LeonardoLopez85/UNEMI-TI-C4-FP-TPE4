@@ -34,6 +34,7 @@ print("Subcadena [0:6]:", subcadena_1)
 print("Subcadena [6:]:", subcadena_2)
 print("Subcadena completa [:]:", subcadena_3)
 
+# ---------------------------Integrante 4---------------------------
 print("\n----------------------------")
 print("Código - Conversión y conteo") 
 print("----------------------------")
